@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden !important; 
+  position: relative;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Swiper ke har tarah ke scrollbar ko block karne ke liye */
+.swiper-scrollbar {
+    display: none !important;
+}
+
+.swiper {
+    overflow: visible !important; /* Isse slides nahi katengi par scrollbar hide hoga */
+}
+
+.train {
+    overflow-x: clip !important; /* Modern browser fix */
+}
+/* Chrome, Safari, Edge ke liye scrollbar gayab */
+*::-webkit-scrollbar {
+    display: none !important;
+}
+
+/* Firefox ke liye */
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

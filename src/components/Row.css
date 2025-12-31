@@ -1,0 +1,62 @@
+.row-container {
+    /* height: auto;
+    width: 100%; */
+    padding: 20px;
+    background-color: #111; /* Dark background */
+    color: white;
+}
+
+.row-title {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.movie-poster {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.movie-poster img {
+    display: block;
+    width: 250px;
+    height: 400px;
+}
+
+/* Netflix jaisa Hover Effect */
+.movie-poster:hover {
+    transform: scale(1.08); /* Mouse le jane par thoda bada hoga */
+}
+
+/* Swiper ke Arrows ko customize karna (Optional) */
+.swiper-button-next, .swiper-button-prev {
+    color: white !important; /* Arrows white color ke */
+    font-weight: bold;
+}
+
+
+
+
+
+.train img {
+    width: 200px;
+    height: 300px;
+    margin-right: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+
+@media (max-width: 768px){
+    .movie-poster img{
+    display: flex;
+    width: 150px;
+    height: 250px;
+    overflow: hidden;
+}
+
+}

@@ -1,0 +1,150 @@
+.navbg {
+    width: 100%;
+    height: 70px;
+    background-color:rgba(0, 0, 0, 0.514);
+    background: transparant;
+    backdrop-filter: blur(10px);
+    color:rgb(255, 0, 0);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+}
+
+ul {
+    list-style-type: none;
+    display : flex;
+    gap: 50px;
+    margin-top: 30px;
+    align-content: right;
+    margin-left: 250px;
+    color:aliceblue;
+    cursor: pointer;
+}
+
+.nav-logo {
+    width: 150px;
+    object-fit: contain; 
+    cursor: pointer;  
+    margin-left: 20px;
+}
+
+
+.top {
+    display : flex;
+    position: sticky;
+    top: 0;
+    padding-left:50px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.user {
+    width: 40px;
+    height: 40px;
+    margin-top: 19px;
+    margin-left: 0px;
+    gap: 20px;
+    border-radius: 19px;
+    position:absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+.fi-br-search {
+    color: white; /* Icon ko safed rang dega */
+    font-size: 20px; /* Size adjust karne ke liye */
+    cursor: pointer; /* Mouse lejane par hath ka nishan banega */
+    /* margin-left: 400px;  
+    margin-right: 20px;
+    margin-bottom: -50px; */
+    position:absolute;
+    right: 150px;
+    top: 30px;
+}
+
+.fi-br-bell {
+    color: white; /* Icon ko safed rang dega */
+    font-size: 20px; /* Size adjust karne ke liye */
+    cursor: pointer; /* Mouse lejane par hath ka nishan banega */
+    /* margin-left: 400px;  
+    margin-right: 20px;
+    margin-bottom: -50px; */
+    position:absolute;
+    right: 100px;
+    top: 30px;
+}
+
+.homeimg {
+    width: 100%;
+    height: 700px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px){
+    .nav-logo {
+    width: 60px;
+    object-fit: contain; 
+    cursor: pointer;  
+    margin-left: -35px;
+    margin-top: 10px;
+}
+
+ul {
+    list-style-type: none;
+    display : flex;
+    gap: 10px;
+    margin-top: 25px;
+    align-content: left;
+    margin-left: -20px;
+    color:aliceblue;
+    cursor: pointer;
+    font-size: 12px;
+}
+.navbg {
+    width: 100%;
+    height: 50px;
+    background-color:rgba(0, 0, 0, 0.514);
+    background: transparant;
+    backdrop-filter: blur(10px);
+    color:rgb(255, 0, 0);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+} 
+
+.fi-br-bell {
+    color: white; /* Icon ko safed rang dega */
+    font-size: 15px; /* Size adjust karne ke liye */
+    cursor: pointer; /* Mouse lejane par hath ka nishan banega */
+    /* margin-left: 400px;  
+    margin-right: 20px;
+    margin-bottom: -50px; */
+    position:absolute;
+    right: 50px;
+    top: 25px;
+}
+.fi-br-search {
+    color: white; /* Icon ko safed rang dega */
+    font-size: 15px; /* Size adjust karne ke liye */
+    cursor: pointer; /* Mouse lejane par hath ka nishan banega */
+    /* margin-left: 400px;  
+    margin-right: 20px;
+    margin-bottom: -50px; */
+    position:absolute;
+    right: 75px;
+    top: 25px;
+}
+
+
+.user {
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+    margin-left: 0px;
+    gap: 0px;
+    border-radius: 19px;
+    position:absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+}
