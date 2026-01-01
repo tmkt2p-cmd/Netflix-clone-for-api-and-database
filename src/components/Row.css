@@ -30,6 +30,7 @@
     display: block;
     width: 250px;
     height: 400px;
+    overflow: hidden;
     margin-right: 10px;
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -60,6 +61,7 @@
 @media (max-width: 768px){
     .movie-poster img{
     display: flex;
+    overflow: hidden;
     width: 150px;
     height: 250px;
     margin-right: -20px;
@@ -67,10 +69,11 @@
 }
 
 .movie-poster {
-    /* width: 400px;
-    height: auto; */
+    width: 400px;
+    height: 300PX;
     margin-left: 20px;
     border-radius: 4px;
+    overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s;
 }
@@ -78,6 +81,7 @@
     height: auto;
     width: 100%;
     padding: 10px;
+    overflow: hidden;
     background-color: #111; 
     color: white;
 } 

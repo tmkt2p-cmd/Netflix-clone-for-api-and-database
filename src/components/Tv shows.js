@@ -51,12 +51,12 @@ export default function  Shows () {
 
         {movie.map((movie) => (
 
-          
+            <SwiperSlide key={movie.imdbID}>
+
                 <div className="train">
-                  <SwiperSlide key={movie.imdbID}>
                 <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.name} className="img"  />
-                </SwiperSlide>
                 </div>
+             </SwiperSlide>
         ) )}   
 
         </Swiper>

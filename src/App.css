@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  overflow: hidden;
+  background-color: black;
 }
 
 /* Chrome, Safari, Edge ke liye scrollbar gayab */
