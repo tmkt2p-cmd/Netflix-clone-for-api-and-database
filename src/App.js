@@ -7,8 +7,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <div className="Navbar">
+   
       <Navbar />
+      <div className="Navbar">
       </div>
       <MainPoster />
       <Movies title="Popular on Netflix" />

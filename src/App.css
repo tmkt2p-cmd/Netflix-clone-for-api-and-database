@@ -1,7 +1,12 @@
 .App {
   text-align: center;
   overflow: hidden;
-  background-color: black;
+  background-color: rgb(24, 24, 24);
+}
+
+.Navbar {
+  height: 70px;
+  width: 100%;
 }
 
 /* Chrome, Safari, Edge ke liye scrollbar gayab */
@@ -50,8 +55,19 @@
   }
 }
 
-.Navbar {
-    position: sticky;
-    top: 0;
-    z-index: 100; 
+
+/* 1. PC/Laptop par Blue Outline hatane ke liye */
+button:focus, 
+input:focus, 
+textarea:focus, 
+select:focus, 
+li:focus,
+a:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* 2. Mobile par Tap karne par jo Blue Flash aata hai, use hatane ke liye */
+* {
+    -webkit-tap-highlight-color: transparent;
 }
