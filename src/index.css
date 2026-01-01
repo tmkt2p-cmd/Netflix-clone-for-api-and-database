@@ -45,3 +45,28 @@ code {
     /* Image ko drag karne se rokta hai (Ghost image nahi banegi) */
     -webkit-user-drag: none; 
 }
+
+/* 1. Puri Website par Text Selection aur Long Press band */
+body {
+    -webkit-user-select: none;  /* Chrome/Safari/Android ke liye */
+    -moz-user-select: none;     /* Firefox ke liye */
+    -ms-user-select: none;      /* IE/Edge ke liye */
+    user-select: none;          /* Standard */
+    
+    /* Mobile Menu (Copy/Search) ko rokne ke liye */
+    -webkit-touch-callout: none; 
+}
+
+/* 2. Images ko Drag hone se rokna (Ghost Image nahi banegi) */
+img {
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+/* ⚠️ SABSE ZARURI: Input aur Textarea mein likhne ki permission dena */
+/* Agar ye nahi likha toh tum Search Bar mein type nahi kar paoge */
+input, textarea {
+    -webkit-user-select: text !important;
+    user-select: text !important;
+    -webkit-touch-callout: default !important; /* Copy-Paste karne ke liye */
+}
