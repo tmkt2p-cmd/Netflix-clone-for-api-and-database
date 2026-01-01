@@ -67,22 +67,31 @@
 {
     .train img {
     display: block;
-    width: 150px;
-    height: 250px;
+    width: 100%;
+    height: auto;
     margin-top: 50px;
-    margin-bottom: -100px;
+    margin-bottom: 50px;
     margin-right: 0px;
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
+.train {
+    /* overflow: hidden; */
+    width: 100%;
+    height: auto;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-color: rgb(24, 24, 24);
+}
+
 .sldr {
     width: 100%;
-    height: 400px;
+    height: auto;
 }
 .mySwiper2 {
     width: 100%;
-    height: 300px;
+    height: auto;
 }
 
 

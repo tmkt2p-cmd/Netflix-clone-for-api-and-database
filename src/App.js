@@ -7,12 +7,13 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <div className="navbar">
+      <div className="Navbar">
       <Navbar />
       </div>
       <MainPoster />
       <Movies title="Popular on Netflix" />
       <TV />
+      <Movies title="Popular on Netflix" />
     </div>
   );
 }

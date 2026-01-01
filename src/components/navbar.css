@@ -32,6 +32,7 @@ ul {
     display : flex;
     position: sticky;
     top: 0;
+    z-index: 100; 
     padding-left:50px;
     margin-top: -10px;
     margin-bottom: -10px;
