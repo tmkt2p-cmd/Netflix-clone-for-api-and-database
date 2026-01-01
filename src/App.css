@@ -1,7 +1,5 @@
 .App {
   text-align: center;
-  background-color: #000000;
- 
 }
 
 /* Chrome, Safari, Edge ke liye scrollbar gayab */
@@ -53,5 +51,5 @@
 .navbar {
     position: sticky;
     top: 0;
-    z-index: 1000; 
+    z-index: 100; 
 }

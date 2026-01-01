@@ -12,7 +12,7 @@ import './Row.css'; // Styling file
 const Row = ({title}) => {
   
   const [movies, setMovies] = useState([]);
-  const [result , setresult] = useState("");
+  
 
 
   useEffect(() => {
@@ -24,7 +24,6 @@ const Row = ({title}) => {
 
   
     const random = search[Math.floor(Math.random() * search.length)];
-    setresult(random);
 
     fetch(`https://www.omdbapi.com/?s=${random}&apikey=8feaad19`).then(res => res.json()).then(data => {
       if(data.Search){ setMovies(data.Search);}
@@ -33,8 +32,8 @@ const Row = ({title}) => {
   },[]);
 
   return (
-    <div className="row-container">
-      <h2 className="row-title">{result}</h2>
+    <div className="row-cntr">
+      <h2 className="row-title">Movies</h2>
       
       <Swiper
         modules={[Navigation]} // Arrows enable karne ke liye
@@ -43,7 +42,7 @@ const Row = ({title}) => {
         slidesPerView={5} // Ek baar me kitni movies dikhengi
         breakpoints={{
             // Mobile (choti screen) par sirf 2 dikhengi
-            320: { slidesPerView: 2 },
+            320: { slidesPerView: 2.5 },
             // Tablet par 3
             768: { slidesPerView: 3 },
             // Laptop par 5
