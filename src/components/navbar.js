@@ -71,7 +71,7 @@ const [nav, setnav] = useState("hind");
     <div className="top">
         <img 
     className="nav-logo"
-    src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" 
+    src="https://fontmeme.com/temporary/f32de6b02493430768e0f425bebc7b51.png" 
     alt="Netflix Logo"/>
     
         <ul>
