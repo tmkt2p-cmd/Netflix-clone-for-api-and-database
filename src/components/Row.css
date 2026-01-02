@@ -24,6 +24,7 @@
     border-radius: 4px;
     cursor: pointer;
     transition: transform 0.3s;
+    margin-bottom: 50px;
 }
 
 .movie-poster img {
@@ -72,6 +73,7 @@
     width: 400px;
     height: 300PX;
     margin-left: 20px;
+    margin-bottom: 0px;
     border-radius: 4px;
     overflow: hidden;
     cursor: pointer;
