@@ -146,3 +146,63 @@ ul {
 }
 
 }
+
+.hiddenprofile {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 50%;
+  height: 300px;
+  color: white;
+  border-style: groove;
+  border-color: black;
+  background-color: black;
+  border-radius: 4px;
+  justify-self: left;
+  position: absolute;
+  right: 5px;
+  top: 70px;
+  transform-origin: top;
+  animation: toptodown 0.1s ease-in-out forwards;
+}
+.gm{
+  font-size: 12px;
+  background-color: gray;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.pbtn {
+  height: 30px;
+  width: 100%;
+  margin-top: 50px;
+  background-color: red;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 12px;
+}
+
+.pbtn:active {
+    background-color: tomato;
+
+}
+.nm{
+  font-size: 12px;
+  background-color: gray;
+  border-radius: 4px;
+  padding: 5px;
+  align-content: left;
+  margin-bottom: 20px;
+}
+
+@keyframes toptodown {
+  0%{
+    transform: scaleY(0);
+    opacity: 0.5;
+  }
+  100%{
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}

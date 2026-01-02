@@ -1,22 +1,41 @@
 import React from 'react'
 import './navbar.css';
 import userIcon from './user.jpg';
+import {useState} from 'react'
 
-export default function navbar() {
-
+function Navbar() {
+const [profile, setprofile] = useState(false);
 
     const scrollM = () => {
+      if (window.innerWidth < 768)
+      {
       window.scrollTo({
-        top: 600,
+        top: 900,
         behavior: "smooth"
       });
+      }
+      else {
+        window.scrollTo({
+        top: 600,
+        behavior: "smooth"
+        });
+        }
+
     };
 
     const scrollTV = () => {
+      if (window.innerWidth < 768){
+      window.scrollTo({
+        top: 500,
+        behavior: "smooth"
+      });
+      }
+    else{
       window.scrollTo({
         top: 1050,
         behavior: "smooth"
       });
+      }
     };
 
      const scrollH = () => {
@@ -50,10 +69,23 @@ export default function navbar() {
 
 <i class="fi fi-br-bell"></i>
 
-<img src={userIcon} alt="user" className="user"/>   
+<img src={userIcon} alt="user" className="user" onClick={ () =>
+setprofile(!profile)}/>   
    </div>
+   
+ 
 
 </div> 
+  {profile && (
+   <div className="hiddenprofile">
+     <h5>Edit Profile</h5>
+          <span className="nm">Name : Mrb</span>
+     <span className="gm">User@gamil.com</span>
+     <button className="pbtn">Sighn Out</button>
+   </div>
+     )
+   }
   </div>
-  )
+  );
 }
+export default Navbar;
