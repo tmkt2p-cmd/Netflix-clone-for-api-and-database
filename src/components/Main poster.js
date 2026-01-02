@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './main poster.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// INHE UNCOMMENT KARNA ZARURI HAI
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation, Autoplay} from 'swiper/modules'; 
@@ -9,7 +8,25 @@ import { Navigation, Autoplay} from 'swiper/modules';
 function MainPoster() {
   const [movie, setMovie] = useState([]);
   
+  const [imageType, setImageType] = useState("backdrop_path"); 
+
   useEffect(() => {
+  
+    const checkScreenSize = () => {
+      if(window.innerWidth < 768) {
+        setImageType("poster_path"); 
+      } else {
+        setImageType("backdrop_path"); 
+      }
+    };
+
+   
+    checkScreenSize();
+
+  
+    window.addEventListener("resize", checkScreenSize);
+
+    // 4. API Call
     async function fetchData() {
       try {
         const response = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=883bbc600df999c84c0b0ccc67ba071e");
@@ -20,6 +37,9 @@ function MainPoster() {
       }
     }
     fetchData();
+
+ 
+    return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
   return (
@@ -38,8 +58,9 @@ function MainPoster() {
           {movie.map((item) => ( 
             <SwiperSlide key={item.id}>
               <div className="poster-wrapper">
+
                 <img
-                  src={`https://image.tmdb.org/t/p/original/${item.backdrop_path}`}
+                  src={`https://image.tmdb.org/t/p/original/${item[imageType]}`}
                   alt={item.title}
                   className="train-image"
                 />

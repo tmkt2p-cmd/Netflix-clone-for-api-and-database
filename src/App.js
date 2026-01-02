@@ -10,9 +10,6 @@ function App() {
     <div className="App">
    
       <Navbar />
-      <div className="Navbar">
-      </div>
-
       <MainPoster />
 
       <Movies title="Popular on Netflix" />

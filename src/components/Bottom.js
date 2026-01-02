@@ -5,7 +5,7 @@ import './Bottom.css';
 function Bottom() {
 
         return (   
-<>
+< >
           <div className="ll">
           <a href="/">FAQ</a>
           <a href="/">Investor Relations</a>

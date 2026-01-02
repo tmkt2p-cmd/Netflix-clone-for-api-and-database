@@ -1,10 +1,12 @@
 import React from 'react'
 import './navbar.css';
 import userIcon from './user.jpg';
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 function Navbar() {
 const [profile, setprofile] = useState(false);
+const [nav, setnav] = useState("show");
+
 
     const scrollM = () => {
       if (window.innerWidth < 768)
@@ -46,9 +48,26 @@ const [profile, setprofile] = useState(false);
     };
 
 
+    useEffect( () => {
+    const handlenav = () => {
+      if(window.scrollY > 100)
+      {
+        setnav("show");
+      }
+      else{
+        setnav("hind");
+      }
+    }
+
+    window.addEventListener("scroll", handlenav);
+
+    return () => {
+          window.removeEventListener("scroll", handlenav);
+    }
+  },[]);
 
   return (
-    <div className="navbg">
+    <div className={nav}>
     <div className="top">
         <img 
     className="nav-logo"

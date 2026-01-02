@@ -1,4 +1,16 @@
-.navbg {
+.hind {
+    width: 100%;
+    height: 0px;
+    position: fixed;
+    z-index: 99999;
+    background-color:rgba(0, 0, 0, 0.514);
+    background: transparant;
+    backdrop-filter: blur(10px);
+    color:rgb(255, 0, 0);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+} 
+.show {
     width: 100%;
     height: 70px;
     position: fixed;
@@ -88,16 +100,16 @@ ul {
 
 @media (max-width: 768px){
     .nav-logo {
-    width: 60px;
+    width: 100px;
     object-fit: contain; 
     cursor: pointer;  
     margin-left: -35px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 ul {
     list-style-type: none;
-    display : flex;
+    display : none;
     gap: 10px;
     margin-top: 25px;
     align-content: left;
