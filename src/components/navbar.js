@@ -5,7 +5,7 @@ import {useState, useEffect} from 'react'
 
 function Navbar() {
 const [profile, setprofile] = useState(false);
-const [nav, setnav] = useState("show");
+const [nav, setnav] = useState("hind");
 
 
     const scrollM = () => {

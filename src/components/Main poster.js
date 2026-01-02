@@ -45,7 +45,11 @@ function MainPoster() {
   return (
      <div className="main-container">
         <Swiper
+          key={movie.length}
           modules={[Navigation, Autoplay]}
+          onAfterInit={(swiper) => {
+      swiper.autoplay.start();
+  }}
           navigation={true}
           slidesPerView={1}
           loop={true}
