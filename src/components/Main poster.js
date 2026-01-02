@@ -31,7 +31,13 @@ function MainPoster() {
       try {
         const response = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=883bbc600df999c84c0b0ccc67ba071e");
         const data = await response.json();
-        setMovie(data.results);
+        let movies = data.results;
+        let x = Math.floor(Math.random()*movies.length)
+
+        let temp = movies[0];
+         movies[0] = movies[x];
+         movies[x] = temp;
+        setMovie(movies);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
