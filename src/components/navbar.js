@@ -1,6 +1,7 @@
 import React from 'react'
 import './navbar.css';
 import userIcon from './user.jpg';
+import mrbflix from './mrbflix.png';
 import {useState, useEffect} from 'react'
 
 function Navbar() {
@@ -71,7 +72,7 @@ const [nav, setnav] = useState("hind");
     <div className="top">
         <img 
     className="nav-logo"
-    src="https://fontmeme.com/temporary/f32de6b02493430768e0f425bebc7b51.png" 
+    src={mrbflix} 
     alt="Netflix Logo"/>
     
         <ul>

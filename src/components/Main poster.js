@@ -78,8 +78,8 @@ function MainPoster() {
                 <div className="content-overlay">
                   <h1 className="train-title">{item.title}</h1>  
                   <p className="train-overview">{item.overview}</p>
-                  <button className="train-btn">PLAY NOW</button>
-                  <button className="train-btn2">WATCH TRAILER</button>
+                  <button className="train-btn"><i className="fa-solid fa-play"></i>  PLAY</button>
+                  <button className="train-btn2"><i className="fa-solid fa-circle-info"></i> More Info</button>
                 </div>
               </div>        
             </SwiperSlide>
