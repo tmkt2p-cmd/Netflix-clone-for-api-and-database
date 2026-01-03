@@ -3,20 +3,34 @@ import MainPoster from './components/Main poster';
 import Movies from './components/movie';
 import TV from './components/Tv shows';
 import Bottom from './components/Bottom';
+import SignUp from './components/SignUp';
 import './App.css';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
+          <BrowserRouter>
    
-      <Navbar />
-      <MainPoster />
 
-      <Movies title="Popular on Netflix" />
-      <TV />
-      <Movies title="Popular on Netflix" />
+      <Routes>
 
-    <Bottom />
+           <Route path="/" element={<>
+                                    <Navbar />
+                                    <MainPoster />
+
+                                    <Movies title="Popular on Netflix" />
+                                    <TV />
+                                    <Movies title="Popular on Netflix" />
+
+                                     <Bottom />
+                                     </>
+                                  } />
+
+           <Route path="/SignUp" element={<SignUp />}   />
+        
+      </Routes>
+    </BrowserRouter>
 
     </div>
   );

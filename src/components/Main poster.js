@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation, Autoplay} from 'swiper/modules'; 
+import {Link} from 'react-router-dom';
 
 function MainPoster() {
   const [movie, setMovie] = useState([]);
@@ -81,7 +82,7 @@ function MainPoster() {
                   <h1 className="train-title">{item.title}</h1>  
                   <p className="train-overview">{item.overview}</p>
                   </div>
-                  <button className="train-btn"><i className="fa-solid fa-play"></i>  PLAY</button>
+                  <Link to="/SignUp" className="train-btn"><i className="fa-solid fa-play"></i>  PLAY</Link>
                   <button className="train-btn2"><i className="fa-solid fa-circle-info"></i> More Info</button>
                 </div>
               </div>        

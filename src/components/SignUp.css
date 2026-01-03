@@ -1,0 +1,106 @@
+.bodys {
+  background-image: url("done.jpeg");
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.transfer {
+    color: rgb(196, 196, 196);
+    font-family: ubuntu;
+}
+.transfer Link{
+    color: white;
+    text-decoration: none;
+}
+
+
+.sign-cntr {
+  /* background: transparent;
+  backdrop-filter: blur(13px);
+  box-shadow: 2px 4px 6px; */
+  height: 100vh;
+  margin-top: 20px;
+}
+
+/* label {
+  margin-left: -100px;
+}  */
+
+.login-form {
+  background: #000000ce;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  height: 500px;
+  text-align: left;
+  margin-top: 100px;
+}
+
+.login-form h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.Label label {
+
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #e0d3d3;
+}
+
+.Label input {
+  width: 100%;
+  padding: 13px;
+  background-color: #ebebeb;
+  color: black;
+  border: none;
+  border-radius: 0px;
+  font-size: 12px;
+  box-sizing: border-box;
+  /* Padding ko width ke andar rakhta hai */
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.submit-btn:hover {
+  background-color: #d10000;
+}
+
+.error-msg {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .sign-cntr {
+    margin-top: -100px;
+    background: transparent;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
