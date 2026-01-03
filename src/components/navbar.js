@@ -97,11 +97,21 @@ setprofile(!profile)}/>
 
 </div> 
   {profile && (
+    <div className="probd">
    <div className="hiddenprofile">
-     <h5>Edit Profile</h5>
-          <span className="nm">Name : Mrb</span>
-     <span className="gm">User@gamil.com</span>
-     <button className="pbtn">Sighn Out</button>
+     <h1>Edit your Profile</h1>
+    <label>User Name</label>
+    <input type="text"value="mrb" />
+  
+    <label>Email</label>
+    <input type="text" value="yourEm@gamil.com" />
+
+      <label>Unique Id</label>
+    <input type="text" value="qjfdcncjsdfhdsfui578fjdhfjkdsre6wehdsmcjaskxjkchj" />
+
+    <button className="sobtn">Sign Out</button>
+    <button className="btbtn">Back To Home</button>
+   </div>
    </div>
      )
    }

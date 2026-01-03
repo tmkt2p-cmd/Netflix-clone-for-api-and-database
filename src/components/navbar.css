@@ -156,51 +156,103 @@ ul {
     right: 10px;
     cursor: pointer;
 }
+.sobtn {
+  height: 50px;
+  width: 100px;
+  margin-top: 50px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 12px;
+  color: rgb(255, 0, 0);
+  font-size: 12px;
+  position: absolute;
+  top: 400px;
+}
+.btbtn {
+  height: 50px;
+  width: 150px;
+  margin-top: 50px;
+  background-color: rgb(255, 0, 0);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: 400px;
+  right: 200px;
+}
 
+}
+
+.probd {
+    width: 100%;
+    height: 100vh;
+    margin-top: -70px;
+    padding: 0px;
+    background-color: black;
+    text-align: left;
 }
 
 .hiddenprofile {
   display: flex;
+    width: 500px;
+    height: 500px;
   flex-direction: column;
-  padding: 20px;
-  width: 50%;
-  height: 300px;
   color: white;
-  border-style: groove;
-  border-color: black;
-  background-color: black;
   border-radius: 4px;
-  justify-self: left;
-  position: absolute;
-  right: 5px;
-  top: 70px;
-  transform-origin: top;
-  animation: toptodown 0.1s ease-in-out forwards;
+  justify-self: center;
+
+
 }
-.gm{
-  font-size: 12px;
-  background-color: gray;
-  border-radius: 4px;
-  padding: 5px;
+.hiddenprofile label {
+      text-align: left;
 }
 
-.pbtn {
-  height: 30px;
-  width: 100%;
+
+.hiddenprofile input {
+    height: 40px;
+    width: 350px;
+    background-color: white;
+    justify-self: center;
+}
+.hiddenprofile h1{
+    font-size: 40px;
+    margin-top: 70px;
+}
+
+.sobtn {
+  height: 50px;
+  width: 150px;
+  margin-top: 50px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 12px;
+  color: rgb(255, 0, 0);
+  font-size: 12px;
+  position: absolute;
+  top: 400px;
+} 
+ .btbtn {
+  height: 50px;
+  width: 150px;
+  margin-top: 50px;
   margin-top: 50px;
   background-color: red;
   border: none;
   border-radius: 12px;
   color: white;
   font-size: 12px;
-}
+  position: absolute;
+  top: 400px;
+  right: 100px;
+} 
 
 .pbtn:active {
     background-color: tomato;
 
 }
 .nm{
-  font-size: 12px;
+  font-size: 16px;
   background-color: gray;
   border-radius: 4px;
   padding: 5px;
