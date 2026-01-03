@@ -100,6 +100,8 @@ setprofile(!profile)}/>
     <div className="probd">
    <div className="hiddenprofile">
      <h1>Edit your Profile</h1>
+
+     <div className="ibox">
     <label>User Name</label>
     <input type="text"value="mrb" />
   
@@ -109,6 +111,7 @@ setprofile(!profile)}/>
       <label>Unique Id</label>
     <input type="text" value="qjfdcncjsdfhdsfui578fjdhfjkdsre6wehdsmcjaskxjkchj" />
 
+    </div>
     <button className="sobtn">Sign Out</button>
     <button className="btbtn">Back To Home</button>
    </div>

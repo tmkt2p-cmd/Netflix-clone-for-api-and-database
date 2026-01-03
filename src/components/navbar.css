@@ -97,6 +97,79 @@ ul {
     cursor: pointer;
 }
 
+.probd {
+    width: 100%;
+    height: 100vh;
+    margin-top: -70px;
+    padding: 0px;
+    background-color: black;
+    text-align: left;
+}
+
+.hiddenprofile {
+  display: flex;
+  width: 500px;
+  height: auto;
+  flex-direction: column;
+  color: white;
+  border-radius: 4px;
+  justify-self: center;
+}
+
+.hiddenprofile label {
+      text-align: left;
+}
+
+
+.hiddenprofile input {
+    height: 20px;
+    width: 100%;
+    border-radius: 4px;
+    padding: 15px;
+    background-color: white;
+    justify-self: center;
+}
+.hiddenprofile h1{
+    font-size: 40px;
+    margin-top: 70px;
+}
+
+.sobtn {
+  height: 60px;
+  width: 200px;
+  margin-top: 50px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 12px;
+  color: rgb(255, 0, 0);
+  font-size: 12px;
+  position: absolute;
+  top: 450px;
+}
+
+.btbtn {
+  height: 60px;
+  width: 200px;
+  margin-top: 50px;
+  background-color: rgb(255, 0, 0);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: 450px;
+  right: 430px;
+}
+ .ibox {
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  border-left: none;
+  border-right: none;
+  padding-top: 50px;
+  padding-bottom: 50px;
+ }
+
 
 @media (max-width: 768px){
     .nav-logo {
@@ -156,9 +229,19 @@ ul {
     right: 10px;
     cursor: pointer;
 }
+
+.hiddenprofile {
+  display: flex;
+  width: 300px;
+  height: 500px;
+  flex-direction: column;
+  color: white;
+  border-radius: 4px;
+  justify-self: center;
+}
 .sobtn {
   height: 50px;
-  width: 100px;
+  width: 150px;
   margin-top: 50px;
   background-color: rgb(255, 255, 255);
   border: none;
@@ -167,6 +250,7 @@ ul {
   font-size: 12px;
   position: absolute;
   top: 400px;
+  left: 30px;
 }
 .btbtn {
   height: 50px;
@@ -179,86 +263,27 @@ ul {
   font-size: 12px;
   position: absolute;
   top: 400px;
-  right: 200px;
+  right: 30px;
 }
-
-}
-
-.probd {
-    width: 100%;
-    height: 100vh;
-    margin-top: -70px;
-    padding: 0px;
-    background-color: black;
-    text-align: left;
-}
-
-.hiddenprofile {
-  display: flex;
-    width: 500px;
-    height: 500px;
-  flex-direction: column;
-  color: white;
-  border-radius: 4px;
-  justify-self: center;
-
-
-}
-.hiddenprofile label {
-      text-align: left;
-}
-
-
 .hiddenprofile input {
     height: 40px;
-    width: 350px;
+    width: 90%;
+    border-radius: 12px;
+    padding-left: 20px;
     background-color: white;
     justify-self: center;
 }
-.hiddenprofile h1{
-    font-size: 40px;
-    margin-top: 70px;
-}
 
-.sobtn {
-  height: 50px;
-  width: 150px;
-  margin-top: 50px;
-  background-color: rgb(255, 255, 255);
-  border: none;
-  border-radius: 12px;
-  color: rgb(255, 0, 0);
-  font-size: 12px;
-  position: absolute;
-  top: 400px;
-} 
- .btbtn {
-  height: 50px;
-  width: 150px;
-  margin-top: 50px;
-  margin-top: 50px;
-  background-color: red;
-  border: none;
-  border-radius: 12px;
-  color: white;
-  font-size: 12px;
-  position: absolute;
-  top: 400px;
-  right: 100px;
-} 
-
-.pbtn:active {
-    background-color: tomato;
+ .ibox {
+  border: solid;
+  border-left: none;
+  border-right: none;
+  padding-top: 50px;
+  padding-bottom: 50px;
+ }
 
 }
-.nm{
-  font-size: 16px;
-  background-color: gray;
-  border-radius: 4px;
-  padding: 5px;
-  align-content: left;
-  margin-bottom: 20px;
-}
+
 
 @keyframes toptodown {
   0%{
