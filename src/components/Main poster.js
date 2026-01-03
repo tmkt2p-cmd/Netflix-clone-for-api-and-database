@@ -74,10 +74,13 @@ function MainPoster() {
                   alt={item.title}
                   className="train-image"
                 />
-    
-                <div className="content-overlay">
+                <div className="fade-effect"></div>
+                
+                <div className="content-overla">
+                  <div className="ttl">
                   <h1 className="train-title">{item.title}</h1>  
                   <p className="train-overview">{item.overview}</p>
+                  </div>
                   <button className="train-btn"><i className="fa-solid fa-play"></i>  PLAY</button>
                   <button className="train-btn2"><i className="fa-solid fa-circle-info"></i> More Info</button>
                 </div>
