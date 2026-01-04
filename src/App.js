@@ -7,6 +7,7 @@ import TV from './components/Tv shows';
 import Bottom from './components/Bottom';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
+import Stream from './components/stream';
 
 import './App.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
@@ -36,6 +37,7 @@ function App() {
            <Route path="/SignIn" element={<SignIn />}   />
             <Route path="/Search" element={<Search />} />
             <Route path="/Notification" element={<Notification/>} />
+            <Route path="/Stream" element={<Stream />} />
 
         
       </Routes>

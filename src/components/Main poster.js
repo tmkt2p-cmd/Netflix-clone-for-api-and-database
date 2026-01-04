@@ -82,7 +82,11 @@ function MainPoster() {
                   <h1 className="train-title">{item.title}</h1>  
                   <p className="train-overview">{item.overview}</p>
                   </div>
-                  <Link to="/SignUp" className="train-btn" style={{ 
+                  <Link to="/Stream" className="train-btn"
+                  state={{ 
+    movieUrl:  `https://vidsrc.to/embed/movie/${item.id}`
+  }}
+   style={{ 
     textDecoration: 'none',    
     color: 'white',       
     display: 'flex',     
