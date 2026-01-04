@@ -1,9 +1,14 @@
 import React from 'react';
 import './SignUp.css';
-import {Link} from 'react-router-dom';
-import { useState } from 'react';
+import { useState} from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { auth } from './firebase';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+
 
 function SignUp() {
+
+  const navigate = useNavigate();
 
   const [password, setpassword] = useState("");
   const [error, seterror] = useState("");
@@ -73,18 +78,38 @@ function SignUp() {
 
     if (newpassword.length < 6) {
       seterror("password must be atleast 6 characters");
+    
     }
     else {
       seterror("");
     }
 
   }
+
+
+
+  //create New Account Firebases code niche chhe//
+
+    const createUser = async (e) => {
+      e.preventDefault();
+
+      try {
+        await createUserWithEmailAndPassword(auth, em, password);
+        console.log("account created");
+          navigate('/');
+      }catch (err) {
+        console.log(err);
+      }
+    };
+
+
+
   return (
     <>
       <div className="bodys">
         <center>
           <div className="sign-cntr">
-            <form action="signup.php" method="post" className="login-form" >
+            <form onSubmit={createUser} className="login-form" >
               <h2>Sign Up</h2>
 
               <div className="Label">
@@ -131,7 +156,7 @@ function SignUp() {
                 {/* <input type="button">Remember Me</input> */}
 
 
-                <button type="submit" className="submit-btn">
+                <button type="submit"  className="submit-btn">
                   Sign Up
                 </button>
 

@@ -147,6 +147,7 @@ ul {
   font-size: 12px;
   position: absolute;
   top: 450px;
+  cursor: pointer;
 }
 
 .btbtn {
@@ -161,6 +162,7 @@ ul {
   position: absolute;
   top: 450px;
   right: 430px;
+  cursor: pointer;
 }
  .ibox {
   display: flex;
@@ -281,6 +283,7 @@ ul {
   top: 450px;
   right: 30px;
   text-align: center;
+  cursor: pointer;
 }
 
 

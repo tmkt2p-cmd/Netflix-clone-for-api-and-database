@@ -1,9 +1,13 @@
 import React from 'react';
 import './SignIn.css';
-import {Link} from 'react-router-dom';
 import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { auth } from './firebase';
+import {signInWithEmailAndPassword} from 'firebase/auth';
 
 function SignIn() {
+
+  const navigate = useNavigate();
 
   const [password, setpassword] = useState("");
   const [error, seterror] = useState("");
@@ -79,12 +83,32 @@ function SignIn() {
     }
 
   }
+
+
+
+
+
+  //firebase Login section for mrbflix user authentication//
+
+    const Login = async (e) => {
+      e.preventDefault();
+
+      try {
+        await signInWithEmailAndPassword(auth, em, password);
+        console.log("sucsess");
+        navigate("/");
+      }catch (err) {
+        console.log("erro hai");
+      }
+    }
+
+
   return (
     <>
       <div className="bodys">
         <center>
           <div className="sign-cntr">
-            <form action="SignIn.php" method="post" className="login-form" >
+            <form onSubmit={Login} className="login-form" >
               <h2>Sign In</h2>
 
               <div className="Label">

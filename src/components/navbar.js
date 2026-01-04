@@ -4,9 +4,14 @@ import userIcon from './user.jpg';
 import mrbflix from './mrbflix.png';
 import {useState, useEffect} from 'react'
 import {Link } from 'react-router-dom';
+import { signOut } from 'firebase/auth'; 
+import { auth } from './firebase'; 
+import { useNavigate } from 'react-router-dom'; 
 
 
 function Navbar() {
+
+  const navigate = useNavigate();
 const [profile, setprofile] = useState(false);
 const [nav, setnav] = useState("hind");
 
@@ -69,6 +74,19 @@ const [nav, setnav] = useState("hind");
     }
   },[]);
 
+
+
+  //signout Login //
+
+  const signout = async () => {
+    try {
+      await signOut(auth);
+      navigate("/SignIn");
+    }catch (err) {
+      console.log("erro hai bhai");
+    }
+  };
+
   return (
     <div className={nav}>
     <div className="top">
@@ -122,10 +140,8 @@ setprofile(!profile)}/>
 
     </div>
    
-    <button className="sobtn">Sign Out</button>
-    <Link  to="" className="btbtn"  style={{ textDecoration: 'none', color: 'white',display: 'flex',           // Flexbox on kiya
-    alignItems: 'center',      // Upar-Niche se Center
-    justifyContent: 'center'}}>Back To Home</Link>
+    <button  onClick={signout} className="sobtn">Sign Out</button>
+    <button  onClick={ () => setprofile(!profile)} className="btbtn"  >Back To Home</button>
 
    </div>
        <div className="newac">
