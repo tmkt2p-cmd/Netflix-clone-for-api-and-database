@@ -18,7 +18,7 @@ function Bottom() {
           <a href="/">Account</a>
           <a href="/">Ways to Watch</a>
           <a href="/">Corporate Information</a>
-          <a href="/">Only on Netflix</a>
+          <a href="/">Only on Mrbflix</a>
          </div>
 
          <h2>English</h2>
