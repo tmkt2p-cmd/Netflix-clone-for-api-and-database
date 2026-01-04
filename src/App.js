@@ -1,3 +1,5 @@
+import Notification from './components/Notification';
+import Search from './components/Search';
 import Navbar from './components/navbar';
 import MainPoster from './components/Main poster';
 import Movies from './components/movie';
@@ -11,6 +13,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
+    
     <div className="App">
           <BrowserRouter>
    
@@ -31,12 +34,15 @@ function App() {
 
            <Route path="/SignUp" element={<SignUp />}   />
            <Route path="/SignIn" element={<SignIn />}   />
+            <Route path="/Search" element={<Search />} />
+            <Route path="/Notification" element={<Notification/>} />
 
         
       </Routes>
     </BrowserRouter>
 
     </div>
+
   );
 }
 

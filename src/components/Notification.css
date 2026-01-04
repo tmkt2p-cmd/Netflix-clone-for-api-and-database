@@ -1,0 +1,19 @@
+.npage {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+.npage img{
+  width: 30px;
+  height: 30px;
+  margin-left: -350px;
+}
+
+
+
+.npage h4 {
+  font-size: 20px;
+  color: white;
+  justify-self: center;
+}
+

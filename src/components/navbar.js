@@ -145,10 +145,10 @@ const icone = async (url) => {
 
    <div className="right">
 
-    <i class="fi fi-br-search"></i>
+    <Link to="/Search" ><i class="fi fi-br-search"></i></Link>
 
 
-<i class="fi fi-br-bell"></i>
+    <Link to="/Notification" ><i class="fi fi-br-bell"></i></Link>
 
 <img src={User?.photoURL} alt="user" className="user" onClick={ () =>
 setprofile(!profile)}/>   
