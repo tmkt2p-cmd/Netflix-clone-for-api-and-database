@@ -46,6 +46,17 @@ ul {
     margin-left: 20px;
 }
 
+.chosephoto {
+  justify-self: center;
+  display: flex;
+  gap: 20px;
+}
+
+.slt {
+  margin-top: -70px;
+  margin-left: 30px;
+}
+
 
 .top {
     display : flex;

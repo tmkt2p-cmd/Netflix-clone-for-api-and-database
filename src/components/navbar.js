@@ -4,7 +4,7 @@ import userIcon from './user.jpg';
 import mrbflix from './mrbflix.png';
 import {useState, useEffect} from 'react'
 import {Link } from 'react-router-dom';
-import { signOut, onAuthStateChanged } from 'firebase/auth'; 
+import { signOut, onAuthStateChanged, updateProfile} from 'firebase/auth'; 
 import { auth } from './firebase'; 
 import { useNavigate } from 'react-router-dom'; 
 
@@ -17,6 +17,29 @@ const [nav, setnav] = useState("hind");
 
 const [User, setUser] = useState(null);
 
+
+  // Avatars he badhay //
+  const avatarList = [
+    "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png",
+    "https://i.pinimg.com/originals/b6/77/cd/b677cd1cde292f261166533d6fe75872.png",
+    "https://i.pinimg.com/564x/1b/a2/e6/1ba2e6d1d4874546c70c91f1024e17fb.jpg",
+    "https://i.pinimg.com/564x/e3/94/30/e39430434d2b8207188f880ac66c6411.jpg"
+  ];
+
+
+// dp change login //
+
+const icone = async (url) => {
+    if (User) {
+      try{
+        await updateProfile(User, {photoURL : url});
+        window.location.reload();
+      }catch(err){
+        console.log(err);
+      }
+    }
+}
+  
 
     const scrollM = () => {
       if (window.innerWidth < 768)
@@ -88,6 +111,7 @@ const [User, setUser] = useState(null);
 
     return () => {
           window.removeEventListener("scroll", handlenav);
+           if(Logined) Logined();
     }
   },[]);
 
@@ -126,7 +150,7 @@ const [User, setUser] = useState(null);
 
 <i class="fi fi-br-bell"></i>
 
-<img src={userIcon} alt="user" className="user" onClick={ () =>
+<img src={User?.photoURL} alt="user" className="user" onClick={ () =>
 setprofile(!profile)}/>   
    </div>
    
@@ -165,6 +189,18 @@ setprofile(!profile)}/>
     <Link to="/SignIn" style={{ textDecoration: 'none', color: 'white' }}>Sighn In to another Account</Link>
     <Link to="/SignUp" style={{ textDecoration: 'none', color: 'white' }}>create New Account</Link>
     </div>
+    
+    <div className="slt">
+      <h3>Select Profile Photo</h3>
+      </div>
+    <div className="chosephoto">
+    {avatarList.map((iconurl, index) => (
+      <img src={iconurl} key={index} alt="avatar"
+       style={{ width: "50px", height: "50px", borderRadius: "5px", cursor: "pointer"}}
+   onClick={ () => icone(iconurl)} />
+      )
+    )}
+</div>
 
    </div>
     </>
