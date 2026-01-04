@@ -4,7 +4,7 @@ import userIcon from './user.jpg';
 import mrbflix from './mrbflix.png';
 import {useState, useEffect} from 'react'
 import {Link } from 'react-router-dom';
-import { signOut } from 'firebase/auth'; 
+import { signOut, onAuthStateChanged } from 'firebase/auth'; 
 import { auth } from './firebase'; 
 import { useNavigate } from 'react-router-dom'; 
 
@@ -14,6 +14,8 @@ function Navbar() {
   const navigate = useNavigate();
 const [profile, setprofile] = useState(false);
 const [nav, setnav] = useState("hind");
+
+const [User, setUser] = useState(null);
 
 
     const scrollM = () => {
@@ -57,6 +59,21 @@ const [nav, setnav] = useState("hind");
 
 
     useEffect( () => {
+
+
+      //Logined uder data fetch//
+
+      const Logined = onAuthStateChanged(auth, (currentuser) => {
+
+        if (currentuser){
+          setUser(currentuser);
+        }
+        else {
+          setUser(null);
+        }
+      });
+
+
     const handlenav = () => {
       if(window.scrollY > 100)
       {
@@ -130,10 +147,10 @@ setprofile(!profile)}/>
 
      <div className="ibox">
     <label>User Name</label>
-    <input type="text"value="mrb" />
+    <input type="text"value={User?.displayName || "MRBFLIX USER"}readOnly />
   
     <label>Email</label>
-    <input type="text" value="yourEm@gamil.com" />
+    <input type="text" value={User?.email} />
 
       <label>Unique Id</label>
     <input type="text" value="qjfdcncjsdfhdsfui578fjdhfjkdsre6wehdsmcjaskxjkchj" />
