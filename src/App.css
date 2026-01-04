@@ -8,6 +8,10 @@
   height: 70px;
   width: 100%;
 }
+.Link {
+    text-decoration: none !important;
+}
+
 
 /* Chrome, Safari, Edge ke liye scrollbar gayab */
 *::-webkit-scrollbar {

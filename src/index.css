@@ -70,3 +70,7 @@ input, textarea {
     user-select: text !important;
     -webkit-touch-callout: default !important; /* Copy-Paste karne ke liye */
 }
+
+.Link {
+    text-decoration: none;
+}

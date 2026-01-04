@@ -82,7 +82,13 @@ function MainPoster() {
                   <h1 className="train-title">{item.title}</h1>  
                   <p className="train-overview">{item.overview}</p>
                   </div>
-                  <Link to="/SignUp" className="train-btn"><i className="fa-solid fa-play"></i>  PLAY</Link>
+                  <Link to="/SignUp" className="train-btn" style={{ 
+    textDecoration: 'none',    
+    color: 'white',       
+    display: 'flex',     
+    alignItems: 'center',  
+    justifyContent: 'center'  
+  }}><i className="fa-solid fa-play" style={{ marginRight: '8px' }}></i>  PLAY</Link>
                   <button className="train-btn2"><i className="fa-solid fa-circle-info"></i> More Info</button>
                 </div>
               </div>        

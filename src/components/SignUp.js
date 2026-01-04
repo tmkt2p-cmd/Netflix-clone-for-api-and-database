@@ -136,7 +136,7 @@ function SignUp() {
                 </button>
 
                 <div className="transfer">
-                <h4>Alredy Have an Account? <Link className="tl" >Sign In</Link></h4>
+                <h4>Alredy Have an Account? <Link to="/SignIn" className="tl" style={{ textDecoration: 'none', color: 'white' }} >Sign In</Link></h4>
                 </div>
 
               </div>

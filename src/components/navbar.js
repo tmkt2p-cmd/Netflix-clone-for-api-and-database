@@ -3,6 +3,8 @@ import './navbar.css';
 import userIcon from './user.jpg';
 import mrbflix from './mrbflix.png';
 import {useState, useEffect} from 'react'
+import {Link } from 'react-router-dom';
+
 
 function Navbar() {
 const [profile, setprofile] = useState(false);
@@ -97,7 +99,14 @@ setprofile(!profile)}/>
 
 </div> 
   {profile && (
+    <>
+ 
+
     <div className="probd">
+    
+
+
+    
    <div className="hiddenprofile">
      <h1>Edit your Profile</h1>
 
@@ -112,13 +121,24 @@ setprofile(!profile)}/>
     <input type="text" value="qjfdcncjsdfhdsfui578fjdhfjkdsre6wehdsmcjaskxjkchj" />
 
     </div>
+   
     <button className="sobtn">Sign Out</button>
-    <button className="btbtn">Back To Home</button>
+    <Link  to="" className="btbtn"  style={{ textDecoration: 'none', color: 'white',display: 'flex',           // Flexbox on kiya
+    alignItems: 'center',      // Upar-Niche se Center
+    justifyContent: 'center'}}>Back To Home</Link>
+
    </div>
+       <div className="newac">
+    <Link to="/SignIn" style={{ textDecoration: 'none', color: 'white' }}>Sighn In to another Account</Link>
+    <Link to="/SignUp" style={{ textDecoration: 'none', color: 'white' }}>create New Account</Link>
+    </div>
+
    </div>
+    </>
      )
    }
   </div>
+ 
   );
 }
 export default Navbar;

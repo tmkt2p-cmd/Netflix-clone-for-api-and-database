@@ -4,6 +4,8 @@ import Movies from './components/movie';
 import TV from './components/Tv shows';
 import Bottom from './components/Bottom';
 import SignUp from './components/SignUp';
+import SignIn from './components/SignIn';
+
 import './App.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
@@ -28,6 +30,8 @@ function App() {
                                   } />
 
            <Route path="/SignUp" element={<SignUp />}   />
+           <Route path="/SignIn" element={<SignIn />}   />
+
         
       </Routes>
     </BrowserRouter>

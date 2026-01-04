@@ -1,16 +1,42 @@
-import React from 'react'
+import React from 'react';
 import './SignIn.css';
+import {Link} from 'react-router-dom';
 import { useState } from 'react';
 
 function SignIn() {
 
   const [password, setpassword] = useState("");
   const [error, seterror] = useState("");
+
   const [emerror, setemerror] = useState("");
   const [nerror, setnameerror] = useState("");
 
   const [em, setem] = useState("");
   const [name, setn] = useState("");
+
+  const [no, setno] = useState("");
+  const [merror, setmerror] = useState("");
+
+
+  const noc = (event) => {
+    const newno = event.target.value;
+    setno(newno);
+    const regex = /^[0-9]+$/
+
+    if (newno.length < 10) {
+      setmerror("Please Enter Valid Phone Number");
+    }
+    // else {
+    //   setmerror("");
+    // }
+
+    else if (!regex.test(newno)) {
+      setmerror("Enter Numbers Only");
+    }
+    else {
+      setmerror("");
+    }
+  }
 
   const nmv = (e) => {
     const newname = e.target.value;
@@ -55,38 +81,71 @@ function SignIn() {
   }
   return (
     <>
-      <div className="login-bg">
-        <div className="login-container">
-          <h2 className="login-title">Login</h2>
+      <div className="bodys">
+        <center>
+          <div className="sign-cntr">
+            <form action="SignIn.php" method="post" className="login-form" >
+              <h2>Sign In</h2>
 
-          <form action="https://Gopi18.my-style.in/Login.php" method="post">
-            <label className="namelabel" >Name:</label>
-            <input value={name} onChange={nmv} type="text" name="username" className='username' placeholder="Enter your name" required></input>
-            {nerror && (
-              <div style={{ color: "red", }}>{nerror}</div>
-            )}
-
-            <label className="namelabel" >Email:</label>
-            <input value={em} onChange={emc} type="text" name="email" placeholder="Enter your email" className='username' required></input>
-            {emerror && (
-              <div style={{ color: "red", }}>{emerror}</div>
-            )}
-
-
-            <label className="namelabel" >Password:</label>
-            <input value={password} onChange={hpc} type="password"  name="password" placeholder="Enter your password" className='username' required></input>
-            {error && (
-              <div style={{ color: "red", }}>{error}</div>
-            )}
+              <div className="Label">
+                {/* <label>User Name</label>
+                <input value={name} onChange={nmv}
+                  type="text"
+                  placeholder="Enter your Name"
+                  required
+                />
+                {nerror && (
+                  <div style={{ color: "red", }}>{nerror}</div>
+                )} */}
 
 
-            <button id="btnlogin" className='btn btn-primary'>Login</button>
+                <label>Email Address</label>
+                <input value={em} onChange={emc}
+                  type="email"
+                  placeholder="Enter your email"
+                  required
+                />
+                {emerror && (
+                  <div style={{ color: "red", }}>{emerror}</div>
+                )}
 
-          </form>
-        </div>
 
+
+
+                <label>Password</label>
+                <input value={password} onChange={hpc}
+                  type="password"
+                  placeholder="Enter your password"
+                  required
+                />
+                {error && (
+                  <div style={{ color: "red", }}>{error}</div>
+                )}
+
+                {/* <label>Mobile Number</label>
+                <input value={no} onChange={noc} type="number" placeholder="Enter Your Mobile Number" required id="mono" />
+                {merror && (
+                  <div style={{ color: "red" }} >{merror}</div>
+                )} */}
+
+                {/* <input type="button">Remember Me</input> */}
+
+
+                <button type="submit" className="submit-btn">
+                  Sign In
+                </button>
+
+                <div className="transfer">
+                <h4>Create A New Account? <Link to="/SignUp" className="tl" style={{ textDecoration: 'none', color: 'white' }} >Sign Up</Link></h4>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </center>
       </div>
     </>
   );
-}
+};
+
 export default SignIn;
