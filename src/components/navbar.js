@@ -153,7 +153,7 @@ setprofile(!profile)}/>
     <input type="text" value={User?.email} />
 
       <label>Unique Id</label>
-    <input type="text" value="qjfdcncjsdfhdsfui578fjdhfjkdsre6wehdsmcjaskxjkchj" />
+    <input type="text" value={User?.uid} />
 
     </div>
    
