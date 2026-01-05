@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation'
 import { Navigation } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 import './Tv shows.css';
 
 export default function  Shows () {
@@ -51,10 +52,13 @@ export default function  Shows () {
 
         {movie.map((movie) => (
 
-            <SwiperSlide key={movie.imdbID}>
+            <SwiperSlide key={movie.id}>
 
                 <div className="train">
+
+                  <Link to="/Stream"   state={{  movieUrl:  `https://vidsrc.to/embed/tv/${movie.id}/1/1`}}>
                 <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.name} className="img"  />
+                </Link>
                 </div>
              </SwiperSlide>
         ) )}   

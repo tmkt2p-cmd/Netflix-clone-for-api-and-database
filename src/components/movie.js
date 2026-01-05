@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState ,useEffect} from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide} from 'swiper/react';
+import { Link } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -52,11 +53,17 @@ const Row = ({title}) => {
       >
         {movies.map((movie) => (
           <SwiperSlide key={movie.imdbID}>
+
             <div className="movie-poster">
+
+            <Link to="/Stream"  state={{    movieUrl:  `https://vidsrc.to/embed/movie/${movie.imdbID}`}}  >
+
                <img 
                  src={movie.Poster !== "N/A" ? movie.Poster : 'https://via.placeholder.com/150x220?text=No+Image'} 
                  alt={movie.Title} 
                />
+              </Link>
+
             </div>
           </SwiperSlide>
         ))}
